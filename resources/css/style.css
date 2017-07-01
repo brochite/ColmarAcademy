@@ -1,0 +1,755 @@
+/* Universal Styles */
+
+html {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: black;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+h2 {
+
+}
+
+h3 {
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+p {
+  margin: 1em 0;
+}
+
+
+
+/* Header */
+
+header {
+  height: 4rem;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  background-color: #76060f;
+  font-family: Verdana;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#logo-text {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 30px;
+  color: black;
+  font-weight: normal;
+}
+
+#logo-text img {
+  margin-left: 1.5rem;
+  height: 3rem;
+}
+
+#logo-color {
+  color: white;
+}
+
+/* Nav */
+
+nav {
+  display: inline-block;
+  padding-right: 40px;
+}
+
+nav ul {
+  padding-left: 20px;
+}
+
+nav li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+.tablet {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
+/*Hide the navigation bar of desktop and display the tablet version*/
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .desktop {
+    display: none;
+  }
+
+  #logo-text {
+    display: none;
+  }
+
+  .tablet {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+/*Hide the logo and company's name and show the mobile navigation bar*/
+@media only screen and (max-width: 700px) {
+
+  header {
+    max-height: 4rem;
+  }
+  #logo-text {
+    display: none;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .tablet {
+    display: none;
+  }
+
+  .mobile {
+    width: 100%;
+    display: block;
+  }
+  .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobile li {
+    padding: 0;
+  }
+
+  .mobile li img:hover {
+    height: 2.5rem;
+  }
+
+}
+
+/* Content */
+
+/*First section: Learn something new everyday*/
+#banner {
+  position: relative;
+  top: 4rem;
+  background-color: white;
+  display: flex;
+  color: white;
+  padding: 2rem 0 2rem 1.5rem;
+  width: 100%;
+}
+
+.story1 {
+  width: 60%;
+}
+
+.story1 img {
+  width: 100%;
+  vertical-align: center;
+  display: inline-block;
+}
+
+.titles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 2.5rem;
+}
+
+.titles h1 {
+  color: black;
+  margin: 0;
+  padding: 0.4rem 0;
+  font-size: 3rem;
+  font-weight: normal;
+  font-family: 'Lato', sans-serif;
+}
+
+.titles h5 {
+  color: black;
+  margin: 0;
+  padding: 0.4rem 0;
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: normal;
+}
+
+.button {
+  background-color: black;
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  width: 270px;
+}
+
+.button:hover {
+  background-color: #76060f;
+}
+
+/*Reduce the font size of h1 and h5 tags*/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .titles h1 {
+    font-size: 2rem;
+    transition: font-size 3s ease-out;
+  }
+
+  .titles h5 {
+    font-size: 1.35rem;
+    transition: font-size 3s ease-out;
+  }
+
+}
+
+/*Reduce again the font size of h1 and h5 tags.  */
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  .titles h1 {
+    font-size: 1.5rem;
+    transition: font-size 3s ease-out;
+  }
+
+  .titles h5 {
+    font-size: 1rem;
+    transition: font-size 3s ease-out;
+  }
+
+}
+
+/*Display the banner as block i.e: headers will appear below the banner photo. This is the mobile view*/
+@media only screen and (max-width: 700px) {
+
+  #banner {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .story1 {
+    width: 100%;
+  }
+
+  .button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 40%;
+  }
+  .titles {
+    padding: 2rem auto 2rem 1rem;
+  }
+
+  .titles h1 {
+    font-size: 2.6rem;
+  }
+
+  .titles h5 {
+    font-size: 1.25rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+
+/*Section 2 Emanuel, Sr Strategist*/
+#details {
+  top: 4rem;
+  position: relative;
+  background-color: white;
+  padding: 2rem 0 0 1.5rem;
+  display: flex;
+  width: 100%;
+}
+
+.emanuel {
+  width: 60%;
+}
+
+.story2 img {
+  width: 100%;
+}
+
+.description {
+  margin-top: 2rem;
+}
+
+.description h1{
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.description p {
+  font-size: 1.20rem;
+  line-height: 1.5;
+}
+.side-stories {
+  width: 32.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 1.5rem;
+}
+
+.small-art {
+  display: flex;
+}
+
+.pic {
+  width: 35%;
+  margin-left: 1rem;
+}
+
+.pic img {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.pic-mobile {
+  display: none;
+}
+
+.small-art-mobile {
+  display: none;
+}
+
+.description-side {
+  margin: auto 0;
+  padding-left: 1rem;
+}
+
+.description-side h1 {
+  font-size: 1.5rem;
+  margin-bottom: .5rem;
+}
+
+.description-side p {
+  font-size: 1.15rem;
+  margin-bottom: .5rem;
+}
+
+.description-side a {
+  color: blue;
+}
+
+#desc-mobile {
+  display: none;
+}
+
+.highlighted {
+  background-color: #76060f;
+  padding: 0;
+  color: white;
+  width: 100%;
+}
+
+#professor {
+  width: 35%;
+  margin-top: 1rem;
+}
+
+/*Reduce the size of headers and reduce emanuel and side-stories divs*/
+@media only screen and (min-width: 700px) and (max-width: 1400px) {
+
+  .description h1 {
+    font-size: 1.25rem;
+    transition: font-size 3s ease-out;
+    margin-bottom: 1rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+    transition: font-size 3s ease-out;
+  }
+
+  .side-stories {
+    width: 30%;
+  }
+
+  .description-side h1{
+    font-size: 1.2rem;
+  }
+
+  .description-side p {
+    font-size: .6rem;
+  }
+
+  .emanuel {
+    width: 45%;
+  }
+
+  .side-stories {
+    width: 34rem;
+  }
+
+}
+
+/*Hide the emanuel div and change the background color of all the small articles*/
+@media only screen and (min-width: 450px) and (max-width: 700px) {
+  .emanuel {
+    display: none;
+  }
+
+  .side-stories {
+    margin: 0 0 2rem 0;
+    width: 50rem;
+  }
+
+  .small-art {
+    background-color: #76060f;
+    padding-top: 1rem;
+    color: white;
+    margin-bottom: 1rem;
+  }
+
+}
+/*Hide emanuel div and show the mobile version of images at the sidebar*/
+@media only screen and (max-width: 450px) {
+
+  .emanuel {
+    display: none;
+  }
+
+  .side-stories {
+    padding: 1rem 1rem 2rem 1rem;
+    margin: 0;
+  }
+  .small-art {
+    display: block;
+  }
+
+  .small-art-mobile {
+    display: block;
+  }
+
+  #desc-mobile {
+    display: block;
+  }
+
+  .pic {
+    display: none;
+  }
+
+  .pic-mobile {
+    display: block;
+    width: 95%;
+  }
+
+  .pic-mobile img {
+    width: 100%;
+  }
+
+  .description-side {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .small-art.highlighted {
+    display: none;
+  }
+}
+
+/*Section 3: Start learning*/
+#section3-header {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  line-height: 1.6;
+  position: relative;
+  top: 2.4rem;
+}
+
+#List-courses {
+  position: relative;
+  top: 1rem;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: center;
+}
+
+.courses {
+  width: 27%;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  background-color: #76060f;
+}
+
+.courses:hover {
+  box-shadow: 10px 5px 5px black;
+}
+
+.pic-titles img {
+  width: 100%;
+  margin: 0;
+}
+
+.title-course {
+  padding-top: 1rem;
+  padding-left: 1rem;
+  color: white;
+  margin-bottom: 2rem;
+  height: 15rem;
+}
+
+.title-course h3 {
+  font-size: 1.5rem;
+}
+
+.title-course p {
+  font-size: 1.1rem;
+}
+
+.desc-courses p {
+  font-size: 1.25rem;
+}
+
+.courses-names {
+  display: none;
+}
+
+/*Reduce the font size of h1 and p tags and reduce the size of the courses div*/
+@media only screen and (min-width: 700px) and (max-width: 1400px) {
+  #section3-header {
+    font-size: 1.5rem;
+  }
+
+  #List-courses {
+    justify-content: space-around;
+
+  }
+  .courses {
+    width: 25%;
+  }
+
+  .title-course h3 {
+    font-size: 1rem;
+  }
+
+  .title-course p {
+    font-size: 1rem;
+  }
+
+  .desc-courses {
+    margin-top: -50px;
+  }
+
+  .desc-courses p {
+    font-size: 0.9rem;
+  }
+}
+
+/*Hide the courses div and show instead the mobile version of it*/
+@media only screen and (max-width: 700px) {
+  #List-courses {
+    display: block;
+    background-color: white;
+  }
+
+  #section3-header {
+    background-color: white;
+    position: relative;
+    top: 4rem;
+  }
+
+  .courses {
+    display: none;
+  }
+
+  .courses-names {
+    display: block;
+  }
+
+  .button2 {
+    width: 85%;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+    background-color: #D3D3D3;
+    margin-left: 1rem;
+  }
+
+  .button2:hover {
+    background-color: #76060f;
+    color: white;
+  }
+}
+
+/*Section 4: Thesis exhibit*/
+#section4-header {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin: 0;
+}
+
+#exhibition {
+  display: flex;
+}
+
+.reimagine-urban {
+  width: 60%;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.reimagine-urban h1, .side-text h1 {
+  /*font-size: 2rem;*/
+  /*side-text added*/
+  font-size: 1rem;
+}
+
+.reimagine-urban p, .side-text p {
+  /*font-size: 1.2rem;*/
+  /*side-text added*/
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+video {
+  width: 100%;
+}
+
+.side-article {
+  display: flex;
+  padding: 1rem 0 1rem 1rem;
+  margin-left: 1rem;
+  box-sizing: border-box;
+}
+.fisma-newyork {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.side-pic img {
+  max-height: 10rem;
+}
+
+.side-text {
+  margin-left: 1rem;
+}
+
+.side-art.highlighted {
+  box-sizing: border-box;
+}
+
+/*Reduce the size of h1 and p tags and the width of side-article div*/
+//bahbah
+@media only screen and (min-width: 700px) and (max-width: 1400px) {
+  .reimagine-urban h1 {
+    font-size: 1rem;
+  }
+
+  .reimagine-urban p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .side-text h1 {
+    font-size: 1rem;
+  }
+
+  .side-text p {
+    font-size: 0.9rem;
+  }
+
+  .side-article.highlighted {
+    width: 95%;
+  }
+
+  .side-article {
+      width: 95%;
+    }
+}
+
+/*Hide section 4 except the video*/
+@media only screen and (max-width: 700px) {
+  .fisma-newyork {
+    display: none;
+  }
+
+  .reimagine-urban h1, .reimagine-urban p {
+    display: none;
+  }
+
+  .reimagine-urban {
+    width: 100%;
+  }
+
+  video {
+    width: 90%;
+  }
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 4rem;
+  background-color: #76060f;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+footer span {
+  margin-left: 1.5rem;
+  color: white;
+}
+
+footer a {
+  padding-right: 1rem;
+}
+
+/*Hide social media icons and hide the right nav items*/
+@media only screen and (max-width: 700px) {
+  .social {
+    display: none;
+  }
+
+  .nav-footer-desktop {
+    display: none;
+  }
+
+  footer span {
+    width: 100%;
+    text-align: center;
+    margin: auto 0;
+  }
+}
