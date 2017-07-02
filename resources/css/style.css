@@ -1,13 +1,15 @@
 /* Universal Styles */
 
-html {
+/*html {
   font-size: 16px;
   font-family: 'Lato', sans-serif;
   color: black;
-}
+}*/
 
-*, *:before, *:after {
-  box-sizing: inherit;
+html {
+  font-size: 16px;
+  font-family: 'CommeRegular', sans-serif;
+  color: black;
 }
 
 body {
@@ -16,33 +18,43 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 h2 {
-
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin: 1rem 0;
 }
 
 h3 {
+  font-size: 1.5rem;
   font-weight: bold;
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 h4 {
-
+  font-size: 1.33rem;
+  margin: 1rem 0;
 }
 
 h5 {
-
+  font-size: 1.25rem;
+  margin: 1rem 0;
 }
 
 p {
-  margin: 1em 0;
+  font-size: 1rem;
+  margin: 1rem 0;
 }
 
-
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
 
 /* Header */
 
@@ -55,7 +67,7 @@ header {
   justify-content: space-between;
   z-index: 1;
   width: 100%;
-  background-color: #76060f;
+  background-color: #82cdf2;
   font-family: Verdana;
   font-size: 1rem;
   box-sizing: border-box;
@@ -92,11 +104,6 @@ nav ul {
 nav li {
   display: inline-block;
   padding: 1rem;
-}
-
-a {
-  color: white;
-  text-decoration: none;
 }
 
 a:hover {
@@ -172,7 +179,8 @@ a:hover {
 #banner {
   position: relative;
   top: 4rem;
-  background-color: white;
+  background-color: #e5e5e5;
+  /*background-color: white;*/
   display: flex;
   color: white;
   padding: 2rem 0 2rem 1.5rem;
@@ -215,7 +223,8 @@ a:hover {
 }
 
 .button {
-  background-color: black;
+  /*background-color: black;*/
+  background-color: #82cdf2;
   text-align: center;
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -223,7 +232,8 @@ a:hover {
 }
 
 .button:hover {
-  background-color: #76060f;
+  /*background-color: #82cdf2;*/
+  background-color: black;
 }
 
 /*Reduce the font size of h1 and h5 tags*/
@@ -310,12 +320,12 @@ a:hover {
 }
 
 .description h1{
-  font-size: 2.5rem;
+  /*font-size: 2.5rem;*/
   margin-bottom: 1.5rem;
 }
 
 .description p {
-  font-size: 1.20rem;
+  /*font-size: 1.20rem;*/
   line-height: 1.5;
 }
 .side-stories {
@@ -353,7 +363,7 @@ a:hover {
   padding-left: 1rem;
 }
 
-.description-side h1 {
+/*.description-side h1 {
   font-size: 1.5rem;
   margin-bottom: .5rem;
 }
@@ -361,10 +371,10 @@ a:hover {
 .description-side p {
   font-size: 1.15rem;
   margin-bottom: .5rem;
-}
+}*/
 
 .description-side a {
-  color: blue;
+  color: #020afc;
 }
 
 #desc-mobile {
@@ -372,10 +382,11 @@ a:hover {
 }
 
 .highlighted {
-  background-color: #76060f;
+  background-color: #82cdf2;
   padding: 0;
   color: white;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 #professor {
@@ -393,7 +404,7 @@ a:hover {
   }
 
   .description p {
-    font-size: 1rem;
+    /*font-size: 1rem;*/
     transition: font-size 3s ease-out;
   }
 
@@ -406,7 +417,7 @@ a:hover {
   }
 
   .description-side p {
-    font-size: .6rem;
+    /*font-size: .6rem;*/
   }
 
   .emanuel {
@@ -431,7 +442,7 @@ a:hover {
   }
 
   .small-art {
-    background-color: #76060f;
+    background-color: #82cdf2;
     padding-top: 1rem;
     color: white;
     margin-bottom: 1rem;
@@ -491,6 +502,7 @@ a:hover {
   padding-bottom: 2rem;
   line-height: 1.6;
   position: relative;
+  background-color: #e5e5e5;
   top: 2.4rem;
 }
 
@@ -500,7 +512,7 @@ a:hover {
   width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
-  background-color: white;
+  background-color: #e5e5e5;
   justify-content: center;
 }
 
@@ -508,7 +520,7 @@ a:hover {
   width: 27%;
   margin-right: 2rem;
   margin-bottom: 2rem;
-  background-color: #76060f;
+  background-color: #82cdf2;
 }
 
 .courses:hover {
@@ -528,16 +540,12 @@ a:hover {
   height: 15rem;
 }
 
-.title-course h3 {
-  font-size: 1.5rem;
-}
-
 .title-course p {
-  font-size: 1.1rem;
+  /*font-size: 1.1rem;*/
 }
 
 .desc-courses p {
-  font-size: 1.25rem;
+  /*font-size: 1.25rem;*/
 }
 
 .courses-names {
@@ -546,9 +554,9 @@ a:hover {
 
 /*Reduce the font size of h1 and p tags and reduce the size of the courses div*/
 @media only screen and (min-width: 700px) and (max-width: 1400px) {
-  #section3-header {
+  /*#section3-header {
     font-size: 1.5rem;
-  }
+  }*/
 
   #List-courses {
     justify-content: space-around;
@@ -558,12 +566,12 @@ a:hover {
     width: 25%;
   }
 
-  .title-course h3 {
+  /*.title-course h3 {
     font-size: 1rem;
-  }
+  }*/
 
   .title-course p {
-    font-size: 1rem;
+    /*font-size: 1rem;*/
   }
 
   .desc-courses {
@@ -571,7 +579,7 @@ a:hover {
   }
 
   .desc-courses p {
-    font-size: 0.9rem;
+    /*font-size: 0.9rem;*/
   }
 }
 
@@ -602,11 +610,13 @@ a:hover {
     padding-bottom: 0.7rem;
     padding-left: 1rem;
     background-color: #D3D3D3;
+    /*background-color: #82cdf2;*/
     margin-left: 1rem;
   }
 
   .button2:hover {
-    background-color: #76060f;
+    background-color: #82cdf2;
+    /*background-color: #D3D3D3;*/
     color: white;
   }
 }
@@ -632,13 +642,13 @@ a:hover {
 .reimagine-urban h1, .side-text h1 {
   /*font-size: 2rem;*/
   /*side-text added*/
-  font-size: 1rem;
+  /*font-size: 1rem;*/
 }
 
 .reimagine-urban p, .side-text p {
   /*font-size: 1.2rem;*/
   /*side-text added*/
-  font-size: 1rem;
+  /*font-size: 1rem;*/
   line-height: 1.5;
 }
 
@@ -678,7 +688,7 @@ video {
   }
 
   .reimagine-urban p {
-    font-size: 1rem;
+    /*font-size: 1rem;*/
     line-height: 1.5;
   }
 
@@ -687,7 +697,7 @@ video {
   }
 
   .side-text p {
-    font-size: 0.9rem;
+    /*font-size: 0.9rem;*/
   }
 
   .side-article.highlighted {
@@ -722,7 +732,7 @@ video {
 footer {
   width: 100%;
   height: 4rem;
-  background-color: #76060f;
+  background-color: #82cdf2;
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
