@@ -1,11 +1,5 @@
 /* Universal Styles */
 
-/*html {
-  font-size: 16px;
-  font-family: 'Lato', sans-serif;
-  color: black;
-}*/
-
 html {
   font-size: 16px;
   font-family: 'CommeRegular', sans-serif;
@@ -15,18 +9,19 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
+  *overflow-x:hidden;*
 }
 
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 h2 {
   font-size: 1.75rem;
   font-weight: bold;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 h3 {
@@ -118,7 +113,7 @@ a:hover {
   display: none;
 }
 /*Hide the navigation bar of desktop and display the tablet version*/
-@media only screen and (min-width: 700px) and (max-width: 1024px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .desktop {
     display: none;
   }
@@ -135,11 +130,12 @@ a:hover {
   }
 }
 /*Hide the logo and company's name and show the mobile navigation bar*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 480px) {
 
   header {
     max-height: 4rem;
   }
+
   #logo-text {
     display: none;
   }
@@ -156,6 +152,7 @@ a:hover {
     width: 100%;
     display: block;
   }
+
   .mobile ul {
     display: flex;
     justify-content: space-around;
@@ -180,7 +177,6 @@ a:hover {
   position: relative;
   top: 4rem;
   background-color: #e5e5e5;
-  /*background-color: white;*/
   display: flex;
   color: white;
   padding: 2rem 0 2rem 1.5rem;
@@ -208,22 +204,19 @@ a:hover {
   color: black;
   margin: 0;
   padding: 0.4rem 0;
-  font-size: 3rem;
-  font-weight: normal;
-  font-family: 'Lato', sans-serif;
+  /*font-size: 3rem;*/
 }
 
 .titles h5 {
   color: black;
   margin: 0;
   padding: 0.4rem 0;
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
   font-weight: normal;
   line-height: normal;
 }
 
 .button {
-  /*background-color: black;*/
   background-color: #82cdf2;
   text-align: center;
   padding-top: .5rem;
@@ -232,40 +225,39 @@ a:hover {
 }
 
 .button:hover {
-  /*background-color: #82cdf2;*/
   background-color: black;
 }
 
 /*Reduce the font size of h1 and h5 tags*/
-@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
   .titles h1 {
-    font-size: 2rem;
+    /*font-size: 2rem;*/
     transition: font-size 3s ease-out;
   }
 
   .titles h5 {
-    font-size: 1.35rem;
+    /*font-size: 1.35rem;*/
     transition: font-size 3s ease-out;
   }
 
 }
 
 /*Reduce again the font size of h1 and h5 tags.  */
-@media only screen and (min-width: 700px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
   .titles h1 {
-    font-size: 1.5rem;
+    /*font-size: 1.5rem;*/
     transition: font-size 3s ease-out;
   }
 
   .titles h5 {
-    font-size: 1rem;
+    /*font-size: 1rem;*/
     transition: font-size 3s ease-out;
   }
 
 }
 
 /*Display the banner as block i.e: headers will appear below the banner photo. This is the mobile view*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
 
   #banner {
     display: block;
@@ -274,7 +266,7 @@ a:hover {
   }
 
   .story1 {
-    width: 100%;
+    width: 95%;
   }
 
   .button {
@@ -287,11 +279,11 @@ a:hover {
   }
 
   .titles h1 {
-    font-size: 2.6rem;
+    /*font-size: 2.6rem;*/
   }
 
   .titles h5 {
-    font-size: 1.25rem;
+    /*font-size: 1.25rem;*/
     letter-spacing: 0.2em;
   }
 }
@@ -328,8 +320,9 @@ a:hover {
   /*font-size: 1.20rem;*/
   line-height: 1.5;
 }
+
 .side-stories {
-  width: 32.4rem;
+  width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -343,6 +336,7 @@ a:hover {
 .pic {
   width: 35%;
   margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .pic img {
@@ -386,7 +380,6 @@ a:hover {
   padding: 0;
   color: white;
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 #professor {
@@ -395,10 +388,10 @@ a:hover {
 }
 
 /*Reduce the size of headers and reduce emanuel and side-stories divs*/
-@media only screen and (min-width: 700px) and (max-width: 1400px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
 
   .description h1 {
-    font-size: 1.25rem;
+    /*font-size: 1.25rem;*/
     transition: font-size 3s ease-out;
     margin-bottom: 1rem;
   }
@@ -408,12 +401,8 @@ a:hover {
     transition: font-size 3s ease-out;
   }
 
-  .side-stories {
-    width: 30%;
-  }
-
   .description-side h1{
-    font-size: 1.2rem;
+    /*font-size: 1.2rem;*/
   }
 
   .description-side p {
@@ -421,24 +410,24 @@ a:hover {
   }
 
   .emanuel {
-    width: 45%;
+    width: 50%;
   }
 
   .side-stories {
-    width: 34rem;
+    width: 45%;
   }
 
 }
 
 /*Hide the emanuel div and change the background color of all the small articles*/
-@media only screen and (min-width: 450px) and (max-width: 700px) {
+@media only screen and (min-width: 480px) and (max-width: 768px) {
   .emanuel {
     display: none;
   }
 
   .side-stories {
-    margin: 0 0 2rem 0;
-    width: 50rem;
+    /*margin: 0 0 2rem 0;*/
+    width: 95%;
   }
 
   .small-art {
@@ -450,7 +439,7 @@ a:hover {
 
 }
 /*Hide emanuel div and show the mobile version of images at the sidebar*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 480px) {
 
   .emanuel {
     display: none;
@@ -459,7 +448,9 @@ a:hover {
   .side-stories {
     padding: 1rem 1rem 2rem 1rem;
     margin: 0;
+    width: 95%;
   }
+
   .small-art {
     display: block;
   }
@@ -482,7 +473,7 @@ a:hover {
   }
 
   .pic-mobile img {
-    width: 100%;
+    width: 95%;
   }
 
   .description-side {
@@ -498,7 +489,7 @@ a:hover {
 /*Section 3: Start learning*/
 #section3-header {
   text-align: center;
-  padding-top: 2rem;
+  /*padding-top: 2rem;*/
   padding-bottom: 2rem;
   line-height: 1.6;
   position: relative;
@@ -512,12 +503,12 @@ a:hover {
   width: 100%;
   display: inline-flex;
   flex-wrap: wrap;
-  background-color: #e5e5e5;
-  justify-content: center;
+  background-color: white;
+  justify-content: space-around;
 }
 
 .courses {
-  width: 27%;
+  width: 27%; //forces boxes to three across (25% is four across)
   margin-right: 2rem;
   margin-bottom: 2rem;
   background-color: #82cdf2;
@@ -553,7 +544,7 @@ a:hover {
 }
 
 /*Reduce the font size of h1 and p tags and reduce the size of the courses div*/
-@media only screen and (min-width: 700px) and (max-width: 1400px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
   /*#section3-header {
     font-size: 1.5rem;
   }*/
@@ -562,13 +553,6 @@ a:hover {
     justify-content: space-around;
 
   }
-  .courses {
-    width: 25%;
-  }
-
-  /*.title-course h3 {
-    font-size: 1rem;
-  }*/
 
   .title-course p {
     /*font-size: 1rem;*/
@@ -584,7 +568,7 @@ a:hover {
 }
 
 /*Hide the courses div and show instead the mobile version of it*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   #List-courses {
     display: block;
     background-color: white;
@@ -602,28 +586,37 @@ a:hover {
 
   .courses-names {
     display: block;
+    justify-content: center;
   }
 
   .button2 {
-    width: 85%;
+    width: 75%;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     padding-left: 1rem;
+    padding-right: 1rem;
     background-color: #D3D3D3;
-    /*background-color: #82cdf2;*/
     margin-left: 1rem;
+    margin-right: 1rem;
   }
 
   .button2:hover {
     background-color: #82cdf2;
-    /*background-color: #D3D3D3;*/
     color: white;
+  }
+}
+
+/*Fix the ugly space when the content re-aligns under 480px*/
+@media only screen and (max-width: 480px) {
+  #section3-header {
+    margin: 0 0 1.5rem 0;
   }
 }
 
 /*Section 4: Thesis exhibit*/
 #section4-header {
   text-align: center;
+  //background-color: #e5e5e5;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin: 0;
@@ -663,6 +656,7 @@ video {
   box-sizing: border-box;
 }
 .fisma-newyork {
+  width: 35%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -681,10 +675,9 @@ video {
 }
 
 /*Reduce the size of h1 and p tags and the width of side-article div*/
-//bahbah
-@media only screen and (min-width: 700px) and (max-width: 1400px) {
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
   .reimagine-urban h1 {
-    font-size: 1rem;
+    /*font-size: 1rem;*/
   }
 
   .reimagine-urban p {
@@ -693,7 +686,7 @@ video {
   }
 
   .side-text h1 {
-    font-size: 1rem;
+    /*font-size: 1rem;*/
   }
 
   .side-text p {
@@ -705,12 +698,12 @@ video {
   }
 
   .side-article {
-      width: 95%;
-    }
+    width: 95%;
+  }
 }
 
 /*Hide section 4 except the video*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .fisma-newyork {
     display: none;
   }
@@ -720,11 +713,11 @@ video {
   }
 
   .reimagine-urban {
-    width: 100%;
+    width: 95%;
   }
 
   video {
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -748,7 +741,7 @@ footer a {
 }
 
 /*Hide social media icons and hide the right nav items*/
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .social {
     display: none;
   }
