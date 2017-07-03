@@ -9,7 +9,7 @@ html {
 body {
   margin: 0;
   box-sizing: border-box;
-  *overflow-x:hidden;*
+  overflow-x:hidden;
 }
 
 h1 {
@@ -228,35 +228,17 @@ a:hover {
   background-color: black;
 }
 
-/*Reduce the font size of h1 and h5 tags*/
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
   .titles h1 {
-    /*font-size: 2rem;*/
     transition: font-size 3s ease-out;
   }
 
   .titles h5 {
-    /*font-size: 1.35rem;*/
     transition: font-size 3s ease-out;
   }
 
 }
 
-/*Reduce again the font size of h1 and h5 tags.  */
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .titles h1 {
-    /*font-size: 1.5rem;*/
-    transition: font-size 3s ease-out;
-  }
-
-  .titles h5 {
-    /*font-size: 1rem;*/
-    transition: font-size 3s ease-out;
-  }
-
-}
-
-/*Display the banner as block i.e: headers will appear below the banner photo. This is the mobile view*/
 @media only screen and (max-width: 768px) {
 
   #banner {
@@ -274,6 +256,7 @@ a:hover {
     padding-bottom: 8px;
     width: 40%;
   }
+
   .titles {
     padding: 2rem auto 2rem 1rem;
   }
@@ -288,6 +271,13 @@ a:hover {
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 90%;
+  }
+}
 
 /*Section 2 Emanuel, Sr Strategist*/
 #details {
@@ -300,7 +290,7 @@ a:hover {
 }
 
 .emanuel {
-  width: 60%;
+  width: 50%;
 }
 
 .story2 img {
@@ -322,7 +312,7 @@ a:hover {
 }
 
 .side-stories {
-  width: 35%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -357,18 +347,12 @@ a:hover {
   padding-left: 1rem;
 }
 
-/*.description-side h1 {
-  font-size: 1.5rem;
-  margin-bottom: .5rem;
+.description-side a {
+  color: #020afc;
 }
 
 .description-side p {
-  font-size: 1.15rem;
-  margin-bottom: .5rem;
-}*/
-
-.description-side a {
-  color: #020afc;
+  margin: 0;
 }
 
 #desc-mobile {
@@ -391,22 +375,12 @@ a:hover {
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
 
   .description h1 {
-    /*font-size: 1.25rem;*/
     transition: font-size 3s ease-out;
     margin-bottom: 1rem;
   }
 
   .description p {
-    /*font-size: 1rem;*/
     transition: font-size 3s ease-out;
-  }
-
-  .description-side h1{
-    /*font-size: 1.2rem;*/
-  }
-
-  .description-side p {
-    /*font-size: .6rem;*/
   }
 
   .emanuel {
@@ -590,7 +564,7 @@ a:hover {
   }
 
   .button2 {
-    width: 75%;
+    width: 85%;
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
     padding-left: 1rem;
